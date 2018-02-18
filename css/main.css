@@ -1,0 +1,81 @@
+/* FOR STYLING EVERYTHING NOT STYLED IN A SPECIFIC CSS PAGE */
+* {
+  padding: 0px;
+  margin: 0px;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.weight-light {
+  font-weight: 300;
+}
+
+.main-wrapper {
+  display: inline-block;
+  width: 85%;
+  vertical-align: top;
+}
+
+#main-title {
+  font-size: 50px;
+  text-align: center;
+  display: none;
+}
+
+#main-logo {
+  display: block;
+  width: 130px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0;
+  filter: alpha(opacity=0); /* For IE8 and earlier */
+}
+
+#catch-phrase {
+  display: none;
+  text-align: center;
+  font-weight: 300;
+  font-size: 23px;
+}
+
+#left-arrow, #right-arrow {
+  position: absolute;
+  display: none;
+  width: 25px;
+}
+
+#left-arrow {
+  margin-left: 2%;
+}
+
+#right-arrow {
+  margin-left: 3.5%;
+}
+
+.edge-wrapper {
+  display: inline-block;
+  width: 7.5%;
+  height: 100px;
+}
+
+#left-arrow:hover, #right-arrow:hover {
+  cursor: pointer;
+}
+
+#canvas {
+  top: 0;
+  z-index: -100; /* -100 IS THE LOWEST VALUE FOR Z-INDEX THIS USED IN THIS CODEBASE */
+  position: fixed;
+  display: none;
+}
+
+.push-down {
+  width: 100%;
+  margin-top: 100px;
+}
+
+.grey {
+  color: rgb(130,130,130);
+}
+
+
+/**/
