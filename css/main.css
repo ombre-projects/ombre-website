@@ -2,7 +2,14 @@
 * {
   padding: 0px;
   margin: 0px;
-  font-family: 'Titillium Web', sans-serif;
+  /* font-family: 'Titillium Web', sans-serif; */
+  font-family: 'Muli', sans-serif;
+  color: var(--color-foreground-main);
+}
+
+body {
+  background-color: var(--color-background-start);
+  overflow: hidden;
 }
 
 .weight-light {
@@ -13,6 +20,7 @@
   display: inline-block;
   width: 85%;
   vertical-align: top;
+  margin-top: 200px;
 }
 
 #main-title {
@@ -21,20 +29,25 @@
   display: none;
 }
 
-#main-logo {
-  display: block;
-  width: 130px;
-  margin-left: auto;
-  margin-right: auto;
-  opacity: 0;
-  filter: alpha(opacity=0); /* For IE8 and earlier */
-}
-
-#catch-phrase {
+.catch-phrase {
   display: none;
-  text-align: center;
   font-weight: 300;
   font-size: 23px;
+  font-size: 50px;
+  margin-left: 30px;
+}
+
+#catch-phrase-0, #catch-phrase-2, #catch-phrase-4 {
+  margin-top: 195px;
+}
+
+#catch-phrase-3 {
+  margin-top: -80px;
+  margin-bottom: 40px;
+}
+
+#catch-phrase-1 {
+  /* margin-top: 195px; */
 }
 
 #left-arrow, #right-arrow {
@@ -61,13 +74,6 @@
   cursor: pointer;
 }
 
-#canvas {
-  top: 0;
-  z-index: -100; /* -100 IS THE LOWEST VALUE FOR Z-INDEX THIS USED IN THIS CODEBASE */
-  position: fixed;
-  display: none;
-}
-
 .push-down {
   width: 100%;
   margin-top: 100px;
@@ -76,6 +82,51 @@
 .grey {
   color: rgb(130,130,130);
 }
+
+#external-icon-logos img:first-child,
+ #external-icon-logos img:nth-child(2),
+  #external-icon-logos img:nth-child(3) {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+#external-icon-logos img{
+  display: block !important;
+  margin-left: 45px;
+  margin-bottom: 20px;
+}
+
+.turquoise {
+  color: var(--color-emphasis);
+}
+
+#content-1 p {
+  margin-left: 100px;
+}
+
+#content-1 p, #content-1 ul {
+  width: 450px;
+  margin-top: 40px !important;
+}
+
+#content-1 ul {
+  margin-left: 100px;
+  list-style-type: none;
+}
+
+#content-1 ul li {
+  margin-top: 20px;
+}
+
+.left-bar {
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-left-color: var(--color-foreground-main);
+  padding-left: 20px;
+}
+
+
+
 
 
 /**/

@@ -3,12 +3,15 @@
 <head>
 	<meta charset='utf-8'>
 	<title>Ombre</title>
+  <link rel='stylesheet' type='text/css' href='css/variables.css'>
   <link rel='stylesheet' type='text/css' href='css/main.css'>
   <link rel='stylesheet' type='text/css' href='css/header.css'>
   <link rel='stylesheet' type='text/css' href='css/content.css'>
   <link rel='stylesheet' type='text/css' href='css/download.css'>
+  <link rel='stylesheet' type='text/css' href='css/background.css'>
   <link rel="icon" href="assets/ombre_logo_thumbnail.png">
-  <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,700" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,700" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700" rel="stylesheet">
   
   <!-- @TODO ensure that our server has a fallback version incase this doesn't load -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -22,53 +25,73 @@
 <body>
   
   <header>
-    <nav>
-      <span id="nav-0" class="nav-button nav-button-current">home</span>
-      <span id="nav-1" class="nav-button">about</span>
-      <span id="nav-2" class="nav-button">roadmap</span>
-      <span id="nav-3" class="nav-button">download</span>
-      <span id="nav-4" class="nav-button">team</span>
+    <!-- @TODO Bind the logo to go home -->
+    <img id="main-logo" src="assets/ombre_logo_medium_white.png" alt="Logo of the Ombre Project"><!--
+ --><nav>
+ 
+      <div>
+        <span id="nav-0" class="nav-button nav-button-current">Home</span>
+        <span id="nav-1" class="nav-button">About</span>
+        <span id="nav-2" class="nav-button">Roadmap</span>
+        <span id="nav-3" class="nav-button">Download</span>
+        <span id="nav-4" class="nav-button">Team</span>
+      </div>
+      
     </nav>
   </header>
 
   <div class="left-wrapper edge-wrapper">
-    <img src="assets/left-arrow.png" id="left-arrow" alt="An image of a left-facing arrow">
+    <div id="external-icon-logos">
+      <!-- @TODO include link to telegram -->
+      <a href="#">
+        <img src="assets/telegram-logo.png" alt="Telegram's Logo">
+      </a>
+      
+      <a href="https://github.com/ombre-projects/">
+        <img src="assets/github-logo.png" alt="GitHub's Logo">
+      </a>
+      <!-- @TODO include link to twitter -->
+      <a href="#">
+        <img src="assets/twitter-logo.png" alt="Twitter's Logo">
+      </a>
+    </div>
   </div><!--
   Browsers render inline-block elements with spaces if there is any whitespace between them
   this comment disables this "feature"
 --><div class="main-wrapper">
     <div id="content-0" class="content content-current">
-      <img id="main-logo" src="assets/ombre_logo_medium.png" alt="Logo of the Ombre Project">
-      <h1 id="main-title" class="weight-light p0">OMBRE</h1>
-      <h3 id="catch-phrase">privacy is a human right</h3>
+      
+      <!-- <h1 id="main-title" class="weight-light p0">OMBRE</h1> -->
+      <h3 id="catch-phrase-0" class="catch-phrase">Privacy is a <span class="turquoise">human right</span>.</h3>
     </div>
     
     <div id="content-1" class="content">
-      <h1 class="section-title">ABOUT</h1>
-      <p>The Ombre Project is dedicated to making a fast, private, equitable and
-        accessible cryptocurrency.
-        <ul>
-          <li>An Ombre transaction is expected to take only 20 minutes.</li>
-          <li>Ombre is truly fungible, untraceable and decentrilized.</li>
-          <li>There was no premine. A novel funding system using a dynamic developer
-            fee was created to ensure equitable distribution of coins.
-          </li>
-          <li>The Ombre Project is actively researching ways to make the currency
-            easier to use by people with minimal technical experience. We believe
-            Ombre is the cash of the future.
-          </li>
-        </ul>
+      <!-- <p> A CryptoNote currency derived from Monero and Sumokoin. </p> -->
         
-        
-      </p>
+      <h3 id="catch-phrase-1" class="catch-phrase">Introducing <span class="turquoise">Ombre</span>.</h3>
+      
+      <p>Secure. Private. Untraceable. Actively developed.</p>
+      
+      <p class="left-bar">Our mission is to enhance the CryptoNote protocol by providing a lightweight,
+      well maintained, intuitive, no-nonsense coin. </p>
+
+      <ul>
+        <li>A 60 second block time increases transaction speed, without comprimising security.</li>
+        <li>An enforced ring-mixin size of 10 ensures safety from blockchain analysis.</li>
+        <li>A transparent developer funding system built into the coin ensures
+        long-term active development without requiring trust from the community.</li>
+        <li>Other CryptoNote coins are treated as collaborators rather than competitors. </li></li>
+      </ul>
+      
     </div>
     
     <div id="content-2" class="content">
-      <h1 class="section-title">ROADMAP</h1>
+      <h3 id="catch-phrase-2" class="catch-phrase">This page is <span class="turquoise">coming soon</span>.</h3>
     </div>
     
     <div id="content-3" class="content download">
-      <div class="push-down"></div>
+      <h3 id="catch-phrase-3" class="catch-phrase">Start using Ombre <span class="turquoise">today</span>.</h3>
+      <!-- <div class="push-down"></div> -->
       
       <div class="column-1 column">
         <h3 id="gui-wallet" class="download-title">GUI wallet</h3>
@@ -86,7 +109,7 @@
         <div class="download-group">
           <span class="download-text">Download For MacOSX</span><br>
           <span class="download-sub-text">
-            <a href="#">64-bit</a> <!-- @TODO INCLUDE REAL LINK INSTEAD OF # -->
+            <a href="#"><em>Coming soon.</em></a> <!-- @TODO INCLUDE REAL LINK INSTEAD OF # -->
           </span>
         </div><br>
         
@@ -94,7 +117,7 @@
         <div class="download-group">
           <span class="download-text">Download For Ubuntu</span><br>
           <span class="download-sub-text">
-            <a href="#">Ubuntu 16.04</a> <!-- @TODO INCLUDE REAL LINK INSTEAD OF # -->
+            <a href="#">Ubuntu 16.04 64-bit</a> <!-- @TODO INCLUDE REAL LINK INSTEAD OF # -->
           </span>
         </div>
       </div>
@@ -114,7 +137,7 @@
         <div class="download-group">
           <span class="download-text">Download For MacOSX</span><br>
           <span class="download-sub-text">
-            <a href="#">64-bit</a> <!-- @TODO INCLUDE REAL LINK INSTEAD OF # -->
+            <a href="#"><em>Coming soon.</em></a> <!-- @TODO INCLUDE REAL LINK INSTEAD OF # -->
           </span>
         </div><br>
         
@@ -122,7 +145,7 @@
         <div class="download-group">
           <span class="download-text">Download For Ubuntu</span><br>
           <span class="download-sub-text">
-            <a href="#">Ubuntu 16.04</a> <!-- @TODO INCLUDE REAL LINK INSTEAD OF # -->
+            <a href="#">Ubuntu 16.04 64-bit</a> <!-- @TODO INCLUDE REAL LINK INSTEAD OF # -->
           </span>
         </div>
       </div>
@@ -137,22 +160,24 @@
           </span>
         </div>
       </div>
-      
-    
-      
+
     </div>
     
     <div id="content-4" class="content">
-      <h1 class="section-title">TEAM</h1>
+      <h3 id="catch-phrase-4" class="catch-phrase">This page is <span class="turquoise">coming soon</span>.</h3>
     </div>
     
     
   </div><!--
 
 --><div class="right-wrapper edge-wrapper">
-    <img src="assets/right-arrow.png" id="right-arrow" alt="An image of a right-facing arrow">
+    <!-- <img src="assets/right-arrow.png" id="right-arrow" alt="An image of a right-facing arrow"> -->
   </div>
-
+  
+  <div id="background-squares">
+    <img src="assets/l-rectangle.png" alt="PNG of a transparent rectangle">
+    <img src="assets/r-rectangle.png" alt="PNG of a transparent rectangle">
+  </div>
   <canvas id="canvas" width="300" height="300"></canvas>
 
 </body>
