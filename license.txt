@@ -1,6 +1,6 @@
 /*
  * Copyright (C) 2018 Arthur Rattew - All Rights Reserved
- * This code is uncondionally licensed to the Ombre Project for exclusive,
+ * This code is unconditionally licensed to the Ombre Project for exclusive,
  * worldwide, and royalty-free use.
  *
  * This code may not be used, modified or reproduced by any party other than

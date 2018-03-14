@@ -17,6 +17,9 @@
     let cPhrase = $(".catch-phrase");
     cPhrase.fadeIn(3000);
     
+    $("#catch-phrase-0, #catch-phrase-2, #catch-phrase-4").css("marginTop", h/2 - 238);
+    $("#catch-phrase-3").css("marginTop", h/2 - 500);
+    
     let edges = $(".edge-wrapper");
     for (let i = 0; i < edges.length; i++) {
       edges[i].style.height = h - 6 + "px"; // -6 is to prevent scroll bars from appearing under normal use
@@ -38,7 +41,7 @@
     $("#nav-3").fadeIn(2900);
     $("#nav-4").fadeIn(3200);
     
-    $("#external-icon-logos").css("marginTop", h/2 - 120);
+    $("#external-icon-logos").css("marginTop", h/2 - 80);
     $("#external-icon-logos img:first-child").animate({"opacity": 1}, 3000);
     $("#external-icon-logos img:nth-child(2)").animate({"opacity": 1}, 3400);
     $("#external-icon-logos img:nth-child(3)").animate({"opacity": 1}, 3800);
