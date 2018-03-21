@@ -1,0 +1,6 @@
+@media only screen and (max-width: 1300px) {
+  /* Hide the ticker if the screen is not big enough to format it correctly*/
+  #omb-ticker {
+    display: none !important;
+  }
+}

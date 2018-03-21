@@ -17,21 +17,21 @@
     let cPhrase = $(".catch-phrase");
     cPhrase.fadeIn(3000);
     
-    $("#catch-phrase-0, #catch-phrase-2, #catch-phrase-4").css("marginTop", h/2 - 238);
-    $("#catch-phrase-3").css("marginTop", h/2 - 500);
+    $("#catch-phrase-0, #catch-phrase-2, #catch-phrase-4").css("marginTop",
+      Math.max(h/2 - 38, 120));
+      
+    $("#catch-phrase-3").css("marginTop", Math.max(h/2 - 500, 120));
+    
+    // about page
+    $("#catch-phrase-1").css("marginTop", Math.max(h/2 - $("#content-1").height()/2, 120));
+    
+    // download page - Math.max ensures margin never crowds the nav bar
+    $("#catch-phrase-3").css("marginTop", Math.max(h/2 - $("#content-3").height()/2, 120)); // $("#content-3").height()/2
     
     let edges = $(".edge-wrapper");
     for (let i = 0; i < edges.length; i++) {
       edges[i].style.height = h - 6 + "px"; // -6 is to prevent scroll bars from appearing under normal use
     }
-    
-    let lArrow = $("#left-arrow");
-    lArrow.css("marginTop", h/2 - 50);
-    lArrow.fadeIn(3000);
-    
-    let rArrow = $("#right-arrow");
-    rArrow.css("marginTop", h/2 - 50);
-    rArrow.fadeIn(3000);
     
     $("#canvas").fadeIn(2000);
     // could switch this section to a loop
@@ -41,23 +41,18 @@
     $("#nav-3").fadeIn(2900);
     $("#nav-4").fadeIn(3200);
     
-    $("#external-icon-logos").css("marginTop", h/2 - 80);
+    $("#external-icon-logos").css("marginTop", Math.max(h/2 - 80, 120));
     $("#external-icon-logos img:first-child").animate({"opacity": 1}, 3000);
     $("#external-icon-logos img:nth-child(2)").animate({"opacity": 1}, 3400);
     $("#external-icon-logos img:nth-child(3)").animate({"opacity": 1}, 3800);
     $("#background-squares").fadeIn(2500);
+    
+    // 1300 is the width at which a media query hides the ticker
+    if (window.innerWidth > 1300) {
+      $("#omb-ticker").fadeIn(3800);
+    }
+    
   } // EOF
-  
-  /*
-  function animateMainUp() {
-    let h = window.innerHeight;
-    let logo = $("#main-logo");
-    let startHeight = h/2 - logo.height() - 20;
-    logo.animate({ // fadeIn won't work as this element needs to be a block
-      marginTop: startHeight - 150
-    }, 1000);
-  }
-  */
   
   $(document).ready(() => {
 

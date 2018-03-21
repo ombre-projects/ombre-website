@@ -9,7 +9,7 @@
 
 body {
   background-color: var(--color-background-start);
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .weight-light {
@@ -19,8 +19,12 @@ body {
 .main-wrapper {
   display: inline-block;
   width: 85%;
+  margin-left: 7.5%;
+  margin-right: 7.5%;
   vertical-align: top;
-  margin-top: 200px;
+  /* margin-top: 200px; */
+  /* padding-left: 7.5%; */
+  /* padding-right: 7.5%; */
 }
 
 #main-title {
@@ -60,6 +64,7 @@ body {
 }
 
 .edge-wrapper {
+  position: fixed;
   display: inline-block;
   width: 7.5%;
   height: 100px;
