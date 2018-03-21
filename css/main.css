@@ -105,7 +105,7 @@ body {
 }
 
 #content-1 p, #content-1 ul {
-  width: 450px;
+  width: 650px;
   margin-top: 40px !important;
 }
 
@@ -115,6 +115,24 @@ body {
 }
 
 #content-1 ul li {
+  margin-top: 20px;
+}
+
+#content-2 p {
+  margin-left: 100px;
+}
+
+#content-2 p, #content-1 ul {
+  width: 650px;
+  margin-top: 40px !important;
+}
+
+#content-2 ul {
+  margin-left: 100px;
+  list-style-type: none;
+}
+
+#content-2 ul li {
   margin-top: 20px;
 }
 

@@ -19,6 +19,7 @@
   
   <!-- @TODO ensure that our server has a fallback version incase this doesn't load -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
   
   <!-- @TODO  REMOVE THIS FILE AND ANY CODE USING IT BEFORE LAUNCHING FOR PRODUCTION -->
   <script type="text/javascript" src="scripts/helper.js"></script>
@@ -79,26 +80,62 @@
         
       <h3 id="catch-phrase-1" class="catch-phrase">Introducing <span class="turquoise">Ombre</span>.</h3>
       
-      <p>Secure. Private. Untraceable. Actively developed.</p>
-      
-      <p class="left-bar">Our mission is to enhance the CryptoNote protocol by providing a lightweight,
-      well maintained, intuitive, no-nonsense coin. </p>
+      <p>
+      Ombre is a cryptonote currency with solid strong security,
+      privacy and untraceability features. Our mission is to enhance
+      the cryptonote protocol to provide a fast, secure and user friendly coin.
+      </p>
+
+      <br><br>
+      <h4 id="catch-phrase-1" class="catch-phrase">Features</h4>
 
       <ul>
-        <li>A 60 second block time increases transaction speed, without comprimising security.</li>
-        <li>An enforced ring-mixin size of 10 ensures safety from blockchain analysis.</li>
-        <li>A transparent developer funding system built into the coin ensures
-        long-term active development without requiring trust from the community.</li>
-        <li>Other CryptoNote coins are treated as collaborators rather than competitors. </li>
-        <li>Ombre is now available for trading on <a href="https://stocks.exchange/">
-        Stocks.Exchange</a>!</li>
+        <li><i class="fas fa-caret-right"></i>  <b><span class="turquoise">Fast transactions</span></b><br>A 60 second block time increases transaction speed, without comprimising security.</li>
+        <li><i class="fas fa-caret-right"></i>  <b><span class="turquoise">High level of privacy</span></b><br>An enforced ring-mixin size of 10 ensures safety from blockchain analysis.</li>
+        <li><i class="fas fa-caret-right"></i>  <b><span class="turquoise">Transparent funding</span></b><br>An innovative developer funding system is build in the blockchain and ensures
+          long-term active development without requiring trust from the community.</li>
       </ul>
+
+      <br><br>
+      <h3 id="catch-phrase-1" class="catch-phrase">Funding</h3>
+      <p>
+      We do not have a premine. Instead we have a project development
+      reward that causes coins to unlock with every block that is
+      found. The algorithm will start with unlocking 6% of the block
+      reward but gradually reduces to 0% in the next 10 years. In
+      total a maximum of 2% of the total coin supply will be unlocked
+       for development.
+      </p>
       
     </div>
     
     <!-- This is the Roadmap section -->
     <div id="content-2" class="content">
-      <h3 id="catch-phrase-2" class="catch-phrase">This page is <span class="turquoise">coming soon</span>.</h3>
+      <H4 id="catch-phrase-1" class="catch-phrase">Q2: Android wallet</H4>
+      <p> We will release an Android wallet which will use remote wallet
+      nodes to scan the blockchain for transactions.
+
+      One problem with existing Android wallets for cryptonote coins is that
+      they use close to 1GB of data (Sumokoin) to scan the blockchain. we will
+      solve this by allowing the Android wallet to send the wallet's viewkey to
+      the remote wallet node. With this approach the transaction scanning can
+      be done server side and this will significantly increase the performance
+      of the wallet.
+
+      All wallet connections will be SSL encrypted and official wallet nodes will be provided.
+      </p>
+
+      <br>
+      <H4 id="catch-phrase-1" class="catch-phrase">Q2: Blockchain protocol optimisations</H4>
+      <p>The blockchain network communication is not optimized and, for example,
+      doesn't even use compression on large data exchanges. We will add
+      compression and will look into modernizing the RPC protocols.</p>
+      <br>
+
+      <H4 id="catch-phrase-1" class="catch-phrase">Q2: Cryptonote PoW update</H4>
+      <P>ASIC devices are available now for cryptonote. We will update
+      the PoW algorithm and make it incompatible with these ASICs.</p>
+
     </div>
     
     <!-- This is the download section -->
