@@ -46,8 +46,6 @@ header nav div {
   color: rgb(200,200,200);
 }
 
-
-
 .nav-button:hover {
   color: rgb(140,140,140);
 }
@@ -68,7 +66,28 @@ header nav div {
 }
 
 
+#omb-ticker {
+  display: none;
+  position: absolute;
+  font-size: 13px;
+  
+  margin-top: 15px;
+  margin-right: 45px;
+  right: 0;
+  
+  font-weight: 300;
+  color: rgb(200,200,200);
+  
+  border-style: solid none solid none;
+  border-color: var(--color-emphasis);
+  border-width: thin;
+  padding: 5px;
 
+}
+
+#omb-ticker span {
+  color: rgb(200,200,200);
+}
 
 
 

@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>Ombre</title>
 	<meta charset='utf-8'>
-	<title>Ombre</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
   <link rel='stylesheet' type='text/css' href='css/variables.css'>
   <link rel='stylesheet' type='text/css' href='css/main.css'>
   <link rel='stylesheet' type='text/css' href='css/header.css'>
   <link rel='stylesheet' type='text/css' href='css/content.css'>
   <link rel='stylesheet' type='text/css' href='css/download.css'>
   <link rel='stylesheet' type='text/css' href='css/background.css'>
+  <!-- Ensure Media Queries come at the end -->
+  <link rel='stylesheet' type='text/css' href='css/mediaQueries.css'>
   <link rel="icon" href="assets/ombre_logo_thumbnail.png">
   <!-- <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,700" rel="stylesheet"> -->
   <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700" rel="stylesheet">
@@ -25,10 +29,15 @@
 <body>
   
   <header>
+    <div id="omb-ticker">
+      Stocks.Exchange:<br>
+      Buy Order: <span id="ticker-buy">0</span> BTC<br>
+      Sell: Order: <span id="ticker-sell">0</span> BTC
+    </div>
+    
     <!-- @TODO Bind the logo to go home -->
     <img id="main-logo" src="assets/ombre_logo_medium_white.png" alt="Logo of the Ombre Project"><!--
  --><nav>
- 
       <div>
         <span id="nav-0" class="nav-button nav-button-current">Home</span>
         <span id="nav-1" class="nav-button">About</span>
@@ -36,8 +45,8 @@
         <span id="nav-3" class="nav-button">Download</span>
         <span id="nav-4" class="nav-button">Team</span>
       </div>
-      
     </nav>
+    
   </header>
 
   <div class="left-wrapper edge-wrapper">
@@ -80,7 +89,9 @@
         <li>An enforced ring-mixin size of 10 ensures safety from blockchain analysis.</li>
         <li>A transparent developer funding system built into the coin ensures
         long-term active development without requiring trust from the community.</li>
-        <li>Other CryptoNote coins are treated as collaborators rather than competitors. </li></li>
+        <li>Other CryptoNote coins are treated as collaborators rather than competitors. </li>
+        <li>Ombre is now available for trading on <a href="https://stocks.exchange/">
+        Stocks.Exchange</a>!</li>
       </ul>
       
     </div>
@@ -98,67 +109,83 @@
       <div class="column-1 column">
         <h3 id="gui-wallet" class="download-title">GUI wallet</h3>
         
-        <img class="download-icon" src="assets/windows-icon.svg" alt="Windows Icon">
-        <div class="download-group">
-          <span class="download-text">Download For Windows</span><br>
-          <span class="download-sub-text">
-            <a href="https://github.com/ombre-projects/OmbreGUIWallet/releases/tag/1.3">64-bit</a> <!-- @TODO INCLUDE REAL LINK INSTEAD OF #  | </span><a href="#">32-bit</a>-->
-          </span>
+        <div class="download-img-group-wrapper">
+          <img class="download-icon" src="assets/windows-icon.svg" alt="Windows Icon">
+          <div class="download-group">
+            <span class="download-text">Download For Windows</span><br>
+            <span class="download-sub-text">
+              <a href="https://github.com/ombre-projects/OmbreGUIWallet/releases/tag/1.3">64-bit</a> <!-- @TODO INCLUDE REAL LINK INSTEAD OF #  | </span><a href="#">32-bit</a>-->
+            </span>
+          </div>
         </div><br>
       
-        <img class="download-icon" src="assets/osx-icon.svg" alt="OSX Icon">
-        <div class="download-group">
-          <span class="download-text">Download For MacOSX</span><br>
-          <span class="download-sub-text">
-            <a href="#"><em>Coming soon.</em></a>
-          </span>
+        <div class="download-img-group-wrapper">
+          <img class="download-icon" src="assets/osx-icon.svg" alt="OSX Icon">
+          <div class="download-group">
+            <span class="download-text">Download For MacOSX</span><br>
+            <span class="download-sub-text">
+              <a href="#"><em>Coming soon.</em></a>
+            </span>
+          </div>
         </div><br>
         
-        <img class="download-icon" src="assets/ubuntu-icon.svg" alt="Ubuntu Icon">
-        <div class="download-group">
-          <span class="download-text">Download For Ubuntu</span><br>
-          <span class="download-sub-text">
-            <a href="https://github.com/ombre-projects/OmbreGUIWallet/releases/tag/1.3">Ubuntu 16.04 64-bit</a>
-          </span>
+        <div class="download-img-group-wrapper">
+          <img class="download-icon" src="assets/ubuntu-icon.svg" alt="Ubuntu Icon">
+          <div class="download-group">
+            <span class="download-text">Download For Ubuntu</span><br>
+            <span class="download-sub-text">
+              <a href="https://github.com/ombre-projects/OmbreGUIWallet/releases/tag/1.3">Ubuntu 16.04 64-bit</a>
+            </span>
+          </div>
         </div>
       </div>
       
       <div class="column-2 column">
         <h3 id="binaries" class="download-title">Binaries</h3>
-        <img class="download-icon" src="assets/windows-icon.svg" alt="Windows Icon">
-        <div class="download-group">
-          <span class="download-text">Download For Windows</span><br>
-          <span class="download-sub-text">
-            <a href="https://github.com/ombre-projects/ombre/releases/tag/1.2">64-bit</a> <span class="grey">
-          </span>
-          </span>
+        
+        <div class="download-img-group-wrapper">
+          <img class="download-icon" src="assets/windows-icon.svg" alt="Windows Icon">
+          <div class="download-group">
+            <span class="download-text">Download For Windows</span><br>
+            <span class="download-sub-text">
+              <a href="https://github.com/ombre-projects/ombre/releases/tag/1.2">64-bit</a> <span class="grey">
+            </span>
+            </span>
+          </div>
         </div><br>
       
-        <img class="download-icon" src="assets/osx-icon.svg" alt="OSX Icon">
-        <div class="download-group">
-          <span class="download-text">Download For MacOSX</span><br>
-          <span class="download-sub-text">
-            <a href="#"><em>Coming soon.</em></a>
-          </span>
+        <div class="download-img-group-wrapper">
+          <img class="download-icon" src="assets/osx-icon.svg" alt="OSX Icon">
+          <div class="download-group">
+            <span class="download-text">Download For MacOSX</span><br>
+            <span class="download-sub-text">
+              <a href="#"><em>Coming soon.</em></a>
+            </span>
+          </div>
         </div><br>
         
-        <img class="download-icon" src="assets/ubuntu-icon.svg" alt="Ubuntu Icon">
-        <div class="download-group">
-          <span class="download-text">Download For Ubuntu</span><br>
-          <span class="download-sub-text">
-            <a href="https://github.com/ombre-projects/ombre/releases/tag/1.2">Ubuntu 16.04 64-bit</a> <!-- @TODO INCLUDE REAL LINK INSTEAD OF # -->
-          </span>
+        <div class="download-img-group-wrapper">
+          <img class="download-icon" src="assets/ubuntu-icon.svg" alt="Ubuntu Icon">
+          <div class="download-group">
+            <span class="download-text">Download For Ubuntu</span><br>
+            <span class="download-sub-text">
+              <a href="https://github.com/ombre-projects/ombre/releases/tag/1.2">Ubuntu 16.04 64-bit</a> <!-- @TODO INCLUDE REAL LINK INSTEAD OF # -->
+            </span>
+          </div>
         </div>
       </div>
       
       <div class="column-3 column">
         <h3 id="source-code" class="download-title">Source Code</h3>
-        <img class="download-icon" src="assets/github-icon.svg" alt="Github's Icon">
-        <div class="download-group">
-          <span class="download-text">Our GitHub</span><br>
-          <span class="download-sub-text">
-            <a href="https://github.com/ombre-projects/ombre">Main Repository</a> <!-- @TODO INCLUDE REAL LINK INSTEAD OF # -->
-          </span>
+        
+        <div class="download-img-group-wrapper">
+          <img class="download-icon" src="assets/github-icon.svg" alt="Github's Icon">
+          <div class="download-group">
+            <span class="download-text">Our GitHub</span><br>
+            <span class="download-sub-text">
+              <a href="https://github.com/ombre-projects/ombre">Main Repository</a> <!-- @TODO INCLUDE REAL LINK INSTEAD OF # -->
+            </span>
+          </div>
         </div>
       </div>
 
@@ -172,9 +199,9 @@
     
   </div><!--
 
---><div class="right-wrapper edge-wrapper">
-    <!-- <img src="assets/right-arrow.png" id="right-arrow" alt="An image of a right-facing arrow"> -->
-  </div>
+--><!-- <div class="right-wrapper edge-wrapper">
+    <img src="assets/right-arrow.png" id="right-arrow" alt="An image of a right-facing arrow">
+  </div> -->
   
   <div id="background-squares">
     <img src="assets/l-rectangle.png" alt="PNG of a transparent rectangle">
@@ -182,8 +209,11 @@
   </div>
   <canvas id="canvas" width="300" height="300"></canvas>
 
+  <script src="scripts/canvas.js" type="text/javascript"></script>
+  <script src="scripts/pageSelector.js" type="text/javascript"></script>
+  <script src="scripts/onclickAnimations.js" type="text/javascript"></script>
+  <script src="scripts/apiCalls.js" type="text/javascript">
+    
+  </script>
 </body>
-<script src="scripts/canvas.js" type="text/javascript"></script>
-<script src="scripts/pageSelector.js" type="text/javascript"></script>
-<script src="scripts/onclickAnimations.js" type="text/javascript"></script>
 </html>
