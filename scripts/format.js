@@ -17,9 +17,10 @@
     let cPhrase = $(".catch-phrase");
     cPhrase.fadeIn(3000);
     
-    $("#catch-phrase-0, #catch-phrase-2, #catch-phrase-4").css("marginTop",
-      Math.max(h/2 - 38, 120));
+    $("#catch-phrase-0, #catch-phrase-4").css("marginTop", Math.max(h/2 - 38, 120));
       
+    $("#catch-phrase-2").css("marginTop", Math.max(h/2 - $("#content-2").height()/2, 120));
+
     $("#catch-phrase-3").css("marginTop", Math.max(h/2 - 500, 120));
     
     // about page
