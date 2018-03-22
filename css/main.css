@@ -18,13 +18,15 @@ body {
 
 .main-wrapper {
   display: inline-block;
-  width: 85%;
+  
+  /* width: 85%;
   margin-left: 7.5%;
-  margin-right: 7.5%;
-  vertical-align: top;
-  /* margin-top: 200px; */
-  /* padding-left: 7.5%; */
-  /* padding-right: 7.5%; */
+  margin-right: 7.5%; */
+  
+  
+  width: 100%;
+  padding-left: 7.5%;
+  padding-right: 7.5%;
 }
 
 #main-title {
@@ -36,8 +38,7 @@ body {
 .catch-phrase {
   display: none;
   font-weight: 300;
-  font-size: 23px;
-  font-size: 50px;
+  font-size: 40px;
   margin-left: 30px;
 }
 
@@ -106,7 +107,7 @@ body {
 
 #content-1 p, #content-1 ul {
   width: 650px;
-  margin-top: 40px !important;
+  margin-top: 15px !important;
 }
 
 #content-1 ul {
@@ -115,7 +116,7 @@ body {
 }
 
 #content-1 ul li {
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
 #content-2 p {
@@ -124,7 +125,7 @@ body {
 
 #content-2 p, #content-1 ul {
   width: 650px;
-  margin-top: 40px !important;
+  margin-top: 15px !important;
 }
 
 #content-2 ul {
